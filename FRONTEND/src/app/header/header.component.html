@@ -1,0 +1,52 @@
+<header class="container">
+    <h1>DC.Comics</h1>
+    <div class="log row">
+    
+        <div class="col-md-2">
+            <button class="btn btn-dark m-4" type="button" [routerLink]="['/login']">
+                <span>Sign in</span> 
+                <img src="../assets/img/icon-log/log-in.png" alt="add" class="log-img">
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-dark m-4" type="button" [routerLink]="['/sign-up']">
+                <span>Sign up</span> 
+                <img src="../assets/img/icon-log/register.png" alt="add" class="log-img">
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-dark m-4" type="button" >
+                <span>Sign out</span> 
+                <img src="../assets/img/icon-log/log-out.png" alt="add" class="log-img">
+            </button>
+        </div>
+    </div>
+    <div class='navbar navbar-fixed-top'>
+        <nav class='navbar-inner header'>
+            <ul class='nav pull-right'>
+                <li>
+                    <a class='nav-link' [routerLink]="['/home']">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' [routerLink]="['/sign-up']">
+                        Form
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' [routerLink]="['/catalog']">
+                        Catalog
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' [routerLink]="['/cart']">
+                        Cart<span class='badge badge-warning' id='lblCartCount'>{{ nbPanier$ | async }}</span>
+                    </a>                    
+                </li>  
+            </ul>
+        </nav>
+    </div>
+</header>
+
+

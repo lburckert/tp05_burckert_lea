@@ -1,0 +1,21 @@
+<div class="container product">
+    <table class="table table-striped table-sm align-middle">
+        <thead>
+            <tr>
+            <th scope="col" class="text-center">Id</th>
+            <th scope="col" class="text-center">Name</th>
+            <th scope="col" class="text-center">Brand</th>
+            <th scope="col" class="text-center">Price</th>
+            <th scope="col" class="text-center">Remove from cart</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of products$ | async">
+            <th scope="row" class="text-center">{{ product.id }}</th>
+            <td class="text-center">{{ product.name }}</td>
+            <td class="text-center">{{ product.brand }}</td>
+            <td class="text-center">{{ product.price }}</td>
+            <td class="text-center"><button type="button" class="btn btn-secondary btn-lg btn-remove" (click)="RemoveProductToCart( product )"><img src="../assets/img/icon-market/minus.png" alt="add" class="remove-cart-img"></button></td>
+        </tbody>
+    </table>
+</div>
+

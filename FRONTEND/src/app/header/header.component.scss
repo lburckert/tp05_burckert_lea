@@ -1,0 +1,71 @@
+$grey-color: rgb(172, 168, 164);
+$blue-color : rgba(13, 30, 36, 0.9);
+$orange-color: rgb(130, 81, 30);
+
+header h1 {
+    text-align: center;
+}
+
+header.container {
+    background-color: $blue-color;
+}
+
+header h1 {
+    padding-top: 20px;
+}
+
+.center {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+.navbar {
+    justify-content: center;
+}
+
+.navbar-inner li {
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: $grey-color;
+    font-size: 1.5em;
+
+    border-top: 4px solid $grey-color;
+
+    transition: border-top 0.3s;
+    &:hover {
+        border-top: 4px solid $orange-color;
+    }
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: $orange-color;
+    color: #fff;
+    padding: 4px 10px;
+    vertical-align: top;
+    margin-left: 3px; 
+}
+
+.log-img {
+
+    width: 10%;
+    margin-left: 10px;
+} 
+
+.log {
+
+    justify-content: flex-end;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+    <form action="" method="post" id="loginForm" [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div class="login-wrap">
+            <div class="login-html">
+                <div id="account" class="" formGroupName="account">
+                    <label for="tab-1" class="tab">Sign In</label>
+                    <div class="login-form">
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label for="username" class="label">Username</label>
+                                <input id="username" type="text" name="username" class="input" formControlName="username">
+                            </div>
+                            <div class="group">
+                                <label for="password" class="label">Password</label>
+                                <input id="password" type="password" name="password" class="input" data-type="password"
+                                [(ngModel)]='password' minlength="5" formControlName="password">
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Sign In">
+                            </div>
+
+                            <div *ngIf="account$ | async; let account" class="fs-3">
+                                <p>
+                                  Bonjour {{ account.username }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

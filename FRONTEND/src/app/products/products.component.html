@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="bloc-filter">
+        <div class="row">
+            <div class="pt-2 col text-center">
+                <label for="product-name">Product name</label>
+            </div>
+            <div class="pt-2 col text-center">
+                <label for="minPrice">Minimum price</label>
+            </div>
+            <div class="pt-2 col text-center">
+                <label for="maxPrice">Maximum price</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pb-3 col text-center">
+                <input name="product-name" type="text" [formControl]="productName">
+            </div>
+            <div class="pb-3 col text-center">
+                <input name="minPrice" type="number" [formControl]="productMinPrice">
+            </div>
+            <div class="pb-3 col text-center center-align">
+                <input name="maxPrice" type="number" [formControl]="productMaxPrice">
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col text-center">
+                <button class="btn btn-primary ms-auto p-2 bd-highlight" (click)="onApplyFilter()">Apply filters</button>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-primary ms-auto p-2 bd-highlight" (click)="OnResetButtonClick()">Reset filters</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container product">
+    <div class="row">
+<tbody *ngFor="let product of products$ | async" >
+<div class="container-card">
+    <div class="card">
+      <div class="card-head">
+        <img src="{{ product.logo }}" alt="logo" class="card-logo">
+        <img src="{{ product.picture }}" alt="picture" class="product-img">
+        <div class="product-detail">
+          <h2>{{ product.brand }}</h2>
+          <h2>{{ product.date }}</h2>
+          <span class="product-detail-link">
+            <button type="button" [routerLink]="['/detail-produit/', product.id]">Product detail</button>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="product-desc">
+          <span class="product-title">
+            {{ product.name }}
+          </span>
+          <span class="product-caption">
+            <p>{{ product.shortdescription }}</p>
+          </span>
+
+          <span class="product-ean">
+            <h4>EAN : {{ product.ean }}</h4>
+          </span>
+          <span class="product-pages">
+            <h4>PAGES : {{ product.pages }}</h4>
+          </span>
+          <span class="product-price">
+            <h4>PRIX : {{ product.price }} €</h4> 
+          </span>
+        </div>
+      </div>
+      <span class="product-add">
+        <button type="button" class="btn btn-lg" (click)="AddProductToCart( product )">
+          <img src="../assets/img/icon-market/add-to-cart.png" alt="add" class="add-cart-img">
+        </button>
+      </span>
+    </div>
+</div>
+</tbody>
+</div>
+</div>

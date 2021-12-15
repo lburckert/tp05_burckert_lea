@@ -1,0 +1,55 @@
+$footer-text-color: rgb(130, 81, 30);
+$footer-text-color-hover: rgba(130, 81, 30, 0.6);
+$text-color: rgb(172, 168, 164);
+$blue-color : rgba(13, 30, 36, 0.9);
+$white-color : #fff;
+
+.btn-primary {
+
+    color: $text-color;
+    background-color: $footer-text-color;
+    border-color: $footer-text-color;
+}
+
+.btn-primary:hover {
+
+    background-color: $footer-text-color-hover;
+}
+
+label {
+
+    color: $blue-color;
+    font-weight: bold;
+}
+
+div.condition {
+
+    color: $footer-text-color;
+    font-weight: bold;
+}
+
+.condition-null {
+
+    margin-bottom: 10px;
+}
+
+div.container {
+
+    border: 4px solid $blue-color;
+    padding: 10px 10px 10px;
+    margin-top: 10px;
+}
+
+.wrong-feedback {
+
+    color: $footer-text-color;
+}
+
+/*.wrong-feedback {
+    display: none;
+}*/
+
+.container {
+
+    background-image: url("../../assets/img/background.jpg");
+}

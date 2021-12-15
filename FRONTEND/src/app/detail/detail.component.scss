@@ -1,0 +1,103 @@
+$footer-text-color: rgb(130, 81, 30);
+$footer-text-color-hover: rgba(130, 81, 30, 0.6);
+$text-color: rgb(172, 168, 164);
+$blue-color : rgba(13, 30, 36, 0.9);
+$table-color :rgba(13, 30, 36, 0.76);
+$white-color : #fff;
+
+
+.detail-container {
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+    .product {
+      position: relative;
+      text-align: center;
+      margin-top: 3rem !important;
+      margin-bottom: 3rem !important;
+      .color {
+        span {
+          padding-top: 6px !important;
+          margin: 2px;
+          &:hover {
+            transition: all 0.2s linear;
+            box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    .detail {
+        background-image: url("../../assets/img/background.jpg");
+      .desc {
+        position: relative;
+        div {
+          position: absolute;
+          right: 10%;
+          font-size: 15px;
+          color: black !important;
+        }
+      }
+      .price {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .fa-share-square-o {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        color: white;
+      }
+    }
+  }
+
+  .picture {
+
+    width: 70%;
+  }
+
+  .border-characteristics {
+    
+    border: 4px solid $blue-color;
+    background: linear-gradient(130deg, #1d2b30 30%, #1d2b30ad 70%);
+    padding: 10px 10px 10px;
+    margin-top: 30px;
+  }
+  
+  .border-characteristics div {
+    
+    color: #fff;
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  .characteritics {
+
+    margin-top: 20px;
+  }
+
+  .logo {
+
+    width: 5%;
+  }
+  
+  .add-cart-img{
+    width: 50%;
+  }
+
+  .product-add {
+    background: $footer-text-color;
+    padding: 20px 60px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    box-shadow: -10px 20px 15px -10px rgb(29 43 48);
+    margin-top: 0px;
+  }
+  
+  h5 {
+    font-size: 1.6rem;
+  }
+
+  .background {
+
+    background: $white-color;
+    border: 4px solid $blue-color;
+  }

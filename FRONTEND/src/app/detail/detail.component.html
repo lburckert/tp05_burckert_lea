@@ -1,0 +1,38 @@
+<div class="container" *ngFor="let product of product$ | async">
+    <div class="detail-container rounded my-5 row">
+      <div class="col-md-12 ">
+        <div class="row background">
+          <div class="rounded-left col-md-6 product">
+            <img class="picture" src="{{ product.picture }}" alt="">
+          </div>
+          <div class="rounded-right col-md-6 detail bg-dange">
+            <div class="border-characteristics">
+            <h5 class="px-1 desc mt-5 text-white text-center">{{ product.name }}</h5>
+            <div class="py-5 px-4">
+              {{ product.description }}
+              <div class="characteritics">
+                Editeur : {{ product.brand }}  <img src="{{ product.logo }}" alt="" class="logo">
+                <br/>
+                Date de sortie : {{ product.date }}
+                <br/>
+                Code EAN : {{ product.ean }}
+                <br/>
+                Nombre de pages : {{ product.pages }}
+                <br/>
+                Prix : {{ product.price }} €
+              </div>
+            </div>
+          </div>
+            <div class="text-center mt-4">
+              <span class="product-add">
+                <button type="button" class="btn" (click)="AddProductToCart( product )">
+                  <img src="../assets/img/icon-market/add-to-cart.png" alt="add" class="add-cart-img">
+                </button>
+              </span>
+            </div>
+            <i class="fa fa-share-square-o" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
